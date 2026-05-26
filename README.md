@@ -280,8 +280,8 @@ This app is part of the **CabSync** monorepo:
 
 | Project | Description |
 |---|---|
-| [`Cabsync-App`](.) | ← You are here (Android native app) |
-| [`CabSync-Website`](../CabSync-Website) | React/Vite web platform |
+| [`Cabsync-App`](https://github.com/abhisheksingh995639/CabSync-App) | ← You are here (Android native app) |
+| [`CabSync-Website`](https://github.com/abhisheksingh995639/CabSync-Website) | React/Vite web platform |
 
 Both share the same Firebase project (Firestore, Auth, FCM).
 
@@ -294,5 +294,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 <p align="center">
-  Made with ❤️ by the CabSync team &nbsp;·&nbsp; <a href="https://cabsync.netlify.app">cabsync.netlify.app</a>
+  Made with ❤️ for VIT Bhopal Students
 </p>
