@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base app theme (required by Compose) -->
+    <style name="Theme.CabSync" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorAccent">#FFD700</item>
+        <item name="android:colorPrimary">#121212</item>
+        <item name="android:colorPrimaryDark">#0E0E0E</item>
+        <item name="android:windowBackground">#131313</item>
+        <item name="android:windowSplashScreenBackground">#131313</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_cabsync_splash_icon</item>
+    </style>
+
+    <!-- Custom DatePickerDialog / TimePickerDialog theme -->
+    <style name="CabSyncPickerDialog" parent="android:Theme.Material.Dialog">
+        <!-- Solid opaque dialog background — no glassmorphism -->
+        <item name="android:windowBackground">#1E1E1E</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- Header background (the colored date banner) -->
+        <item name="android:datePickerStyle">@style/CabSyncDatePicker</item>
+        <item name="android:timePickerStyle">@style/CabSyncTimePicker</item>
+        <!-- Accent / button highlight -->
+        <item name="android:colorAccent">#FFD700</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">#F5F5F5</item>
+        <item name="android:textColorSecondary">#A0A0A0</item>
+        <!-- Panel / body background -->
+        <item name="android:colorBackground">#1E1E1E</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+    </style>
+
+    <style name="CabSyncDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:headerBackground">#1A1A00</item>
+        <item name="android:headerMonthTextAppearance">@style/PickerHeaderText</item>
+        <item name="android:headerDayOfMonthTextAppearance">@style/PickerHeaderText</item>
+        <item name="android:headerYearTextAppearance">@style/PickerHeaderText</item>
+    </style>
+
+    <style name="CabSyncTimePicker" parent="android:Widget.Material.TimePicker">
+        <item name="android:headerBackground">#1A1A00</item>
+        <item name="android:headerTimeTextAppearance">@style/PickerHeaderText</item>
+        <item name="android:headerAmPmTextAppearance">@style/PickerHeaderText</item>
+    </style>
+
+    <style name="PickerHeaderText">
+        <item name="android:textColor">#FFD700</item>
+    </style>
+
+</resources>

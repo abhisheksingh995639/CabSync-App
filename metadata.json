@@ -1,0 +1,6 @@
+{
+  "name": "CabSync",
+  "description": "A native Android carpooling application built with Kotlin and Jetpack Compose.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
