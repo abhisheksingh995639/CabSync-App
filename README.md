@@ -14,7 +14,25 @@
   <img src="https://img.shields.io/badge/Firebase-Firestore%20%2B%20FCM-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/abhisheksingh995639/CabSync-App/releases/latest/download/app-release.apk">
+    <img src="https://img.shields.io/badge/⬇️%20Download%20APK-v1.0.0-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" />
+  </a>
+</p>
+
 ---
+
+## 📲 Install on Android
+
+1. **[Download the latest APK](https://github.com/abhisheksingh995639/CabSync-App/releases/latest/download/app-release.apk)**
+2. On your Android phone, open the downloaded file
+3. If prompted, allow **"Install from unknown sources"** in Settings
+4. Tap **Install** and enjoy CabSync!
+
+> **Minimum requirement:** Android 7.0 (API 24) or higher
+
+---
+
 
 ## 📖 Overview
 

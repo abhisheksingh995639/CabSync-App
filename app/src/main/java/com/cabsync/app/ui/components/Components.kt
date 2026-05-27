@@ -586,6 +586,12 @@ fun DashboardSection(
 fun RideCard(ride: Ride, onClick: () -> Unit) {
     val brandYellow = Color(0xFFFFD700)
     val isDark = com.cabsync.app.ui.theme.LocalTheme.current.isDark
+    val context = LocalContext.current
+    val imageLoader = remember(context) {
+        ImageLoader.Builder(context)
+            .components { add(SvgDecoder.Factory()) }
+            .build()
+    }
     val onSurfaceVariant = if (isDark) Color(0xFFD0C6AB) else CabSyncTokens.LightOnSurfaceVariant
     val gradientColors = if (isDark) CabSyncTokens.GradientCard else CabSyncTokens.LightGradientCard
     val borderColor = if (isDark) CabSyncTokens.BorderGlow else CabSyncTokens.LightBorderGlow
@@ -617,6 +623,7 @@ fun RideCard(ride: Ride, onClick: () -> Unit) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     AsyncImage(
                         model = ride.hostAvatar,
+                        imageLoader = imageLoader,
                         contentDescription = null,
                         modifier = Modifier
                             .size(44.dp)
@@ -740,6 +747,11 @@ fun CabSyncDrawerContent(
 ) {
     val context = LocalContext.current
     val currentUser = remember { com.google.firebase.auth.FirebaseAuth.getInstance().currentUser }
+    val imageLoader = remember(context) {
+        ImageLoader.Builder(context)
+            .components { add(SvgDecoder.Factory()) }
+            .build()
+    }
     val sharedPrefs = remember(context) { context.getSharedPreferences("cabsync_user_prefs", android.content.Context.MODE_PRIVATE) }
     var name by remember(currentUser, sharedPrefs) { mutableStateOf(sharedPrefs.getString("user_name", currentUser?.displayName?.ifEmpty { null }) ?: currentUser?.email?.substringBefore('@') ?: "Abhishek Singh") }
     var avatarUrl by remember {
@@ -800,6 +812,7 @@ fun CabSyncDrawerContent(
                     Box(modifier = Modifier.clickable { onNavigateToProfile() }) {
                         AsyncImage(
                             model = avatarUrl,
+                            imageLoader = imageLoader,
                             contentDescription = "User Avatar",
                             contentScale = ContentScale.Crop,
                             modifier = Modifier
